@@ -4,15 +4,87 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Free Space Routine</title>
+<meta name="description" content="Never run out of space. Clear photo clutter and junk, a minute at a time.">
+<link rel="icon" href="img/icon-512.png">
 <style>
-body{font-family:system-ui,sans-serif;max-width:36rem;margin:3rem auto;padding:0 1rem;line-height:1.6;color:#222}
-h1{margin-bottom:.2rem}a{color:#4a5ab0}
+@font-face{font-family:Kalam;font-weight:700;src:url(fonts/kalam_bold.ttf)}
+@font-face{font-family:Atkinson;font-weight:400;src:url(fonts/atkinson_regular.ttf)}
+@font-face{font-family:Atkinson;font-weight:700;src:url(fonts/atkinson_bold.ttf)}
+:root{--night:#2B1E3F;--straw:#F2C14E;--moss:#3E7B5A;--ember:#C8402A;--lilac:#B9A7D9;--paper:#F3F0F7;--ink:#1C1626}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 Atkinson,system-ui,sans-serif}
+h1,h2,h3{font-family:Kalam,cursive;line-height:1.15;margin:0}
+a{color:var(--night)}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+header{background:var(--night);color:var(--paper);padding:3rem 0 3.5rem}
+header .wrap{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+header img{width:132px;height:132px;border-radius:28px}
+header h1{font-size:clamp(2.4rem,7vw,3.8rem);color:var(--straw)}
+header p{margin:.6rem 0 0;color:var(--lilac);font-size:1.25rem;max-width:30rem}
+.badge{display:inline-block;margin-top:1.2rem;background:var(--straw);color:var(--ink);font-family:Kalam,cursive;font-size:1.2rem;padding:.35rem 1.1rem;border:2px solid var(--ink);border-radius:14px 10px 16px 9px}
+section{padding:3rem 0}
+.row{display:flex;gap:2.5rem;align-items:center;flex-wrap:wrap}
+.row>div{flex:1 1 20rem}
+.row svg{flex:0 0 auto;width:min(100%,19rem);height:auto}
+h2{font-size:2rem;margin-bottom:.8rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.4rem;margin-top:1.5rem}
+.card{position:relative;padding:1.2rem 1.3rem;border:2.5px solid var(--ink);border-radius:14px 10px 16px 9px;background:var(--paper)}
+.card::before{content:"";position:absolute;inset:0;transform:translate(5px,6px);background:var(--c);border-radius:inherit;z-index:-1;opacity:.85}
+.card h3{font-size:1.4rem;margin-bottom:.3rem}
+.card p{margin:0}
+.steps{isolation:isolate}
+.keep{--c:var(--moss)}.later{--c:var(--straw)}.del{--c:var(--ember)}
+.alt{background:#E9E3F3}
+.alt svg{max-height:22rem}
+ul{padding-left:1.2rem}li{margin:.4rem 0}
+footer{background:var(--night);color:var(--lilac);padding:2rem 0;font-size:1rem}
+footer a{color:var(--straw)}
 </style>
 </head>
 <body>
-<h1>Free Space Routine</h1>
-<p>An Android app that gently frees space on your phone. It finds bursts, look-alike photos, exact copies, screenshots, old downloads and big videos, and you decide what goes. Everything is processed on your phone and removed files go to the app's own trash first.</p>
-<p>Coming soon to Google Play.</p>
-<p><a href="/privacy/free-space-routine/">Privacy policy</a></p>
+<header><div class="wrap">
+  <img src="img/icon-512.png" alt="Free Space Routine app icon">
+  <div>
+    <h1>Free Space Routine</h1>
+    <p>Never run out of space. Clear photo clutter and junk, a minute at a time.</p>
+    <span class="badge">Coming soon to Google Play</span>
+  </div>
+</div></header>
+
+<section><div class="wrap row">
+  <div>
+    <h2>A minute a day, not a weekend of cleaning</h2>
+    <p>The app looks through your photos and files in the background and sorts what it finds: bursts, look-alikes, exact copies, screenshots, old downloads and big videos. You get a short stage of a few cards, one question each.</p>
+    <div class="steps">
+      <div class="card keep"><h3>Keep</h3><p>It stays, and the app leaves it alone for months.</p></div>
+      <div class="card later"><h3>Later</h3><p>Not sure? Ask me another day.</p></div>
+      <div class="card del"><h3>Delete</h3><p>It goes to the app's Trash, not into thin air.</p></div>
+    </div>
+  </div>
+  <img src="img/witch-fly.svg" alt="" style="width:min(100%,22rem);height:auto">
+</div></section>
+
+<section class="alt"><div class="wrap row">
+  <img src="img/witch-hero.svg" alt="" style="width:min(100%,15rem);height:auto">
+  <div>
+    <h2>Safe first</h2>
+    <ul>
+      <li>Everything you remove stays in the Trash for 30 days, so you can bring it back.</li>
+      <li>The app suggests, you approve. For bursts and look-alikes it picks the best shot for you: sharp, eyes open, smiling.</li>
+      <li>Your photos are never uploaded. Everything is worked out on your phone.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section><div class="wrap row">
+  <div>
+    <h2>Early test version</h2>
+    <p>Free Space Routine is in testing on Google Play. Thank you for trying it, and tell us what feels wrong, slow or confusing.</p>
+    <p><a href="/privacy/free-space-routine/">Read the privacy policy</a></p>
+  </div>
+  <img src="img/witch-peek.svg" alt="" style="width:min(100%,18rem);height:auto">
+</div></section>
+
+<footer><div class="wrap">Free Space Routine · <a href="/privacy/free-space-routine/">Privacy policy</a></div></footer>
 </body>
 </html>
